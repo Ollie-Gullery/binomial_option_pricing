@@ -103,7 +103,7 @@ S = np.zeros(N + 1)
             C[j] = discount_rate * expected_value_option
 
     return C[0]
-    ```
+```
 #### Calling our Function
 ```python
 multi_period_binomial_tree(K, T, S0, r, N, u, d, option_type='C')
