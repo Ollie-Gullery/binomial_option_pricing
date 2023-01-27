@@ -13,8 +13,7 @@ d = 1 / u  # We make d the reciprocal of u to ensure we have a balanced tree
 option_type = 'C'
 
 
-
-def binomial_tree(K, T, S0, r, N, u, d, option_type='C'):
+def multi_period_binomial_tree(K, T, S0, r, N, u, d, option_type='C'):
     # Calculating Discount Rate
     dt = T / N  # timestep
     discount_rate = np.exp(-r * dt)  # e^-rt
@@ -39,10 +38,11 @@ def binomial_tree(K, T, S0, r, N, u, d, option_type='C'):
 
     # discount payoff back through tree
     for i in np.arange(N, 0, -1):
-        for j in range(0, i): # discount back i periods
+        for j in range(0, i):  # discount back i periods
             expected_value_option = (q * C[j + 1] + (1 - q) * C[j])
             C[j] = discount_rate * expected_value_option
 
     return C[0]
 
-print(binomial_tree(K, T, S0, r, N, u, d, option_type='C'))
+
+print(multi_period_binomial_tree(K, T, S0, r, N, u, d, option_type='C'))
