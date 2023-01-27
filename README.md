@@ -74,7 +74,7 @@ def multi_period_binomial_tree(K, T, S0, r, N, u, d, option_type='C'):
     # Calculating Risk Neutral Probability
     q = (np.exp(r * dt) - d) / (u - d)
 ```
-#### Finding Prices at Maturity (period N)
+#### Finding Stock Prices at Maturity (period N)
 ```python
 S = np.zeros(N + 1)
 
