@@ -15,9 +15,9 @@ option_type = 'C'
 ```
 We can begin by finding the formula for the price of a call option through its stock price **S0** where **Su** is `S0 * up factor` and **Sd** is `S0 * down factor`.
 
-We can then find the probability `q (risk netural probability)` of the stock going up which and use `1-q` to find the probability of the stock going down similar to the expected value of the call option. We can then find the payoff through the express `payoff = max(Su-K, 0)` where `Cu` and `Cd` are the payoffs for up or down. Due to the *law of no arbitrage* we can discount this payoff by `e^rt` or `e^r` (as t = 1) to find the current Call price.
+We can then find the probability `q (risk netural probability)` of the stock going up which and use `1-q` to find the probability of the stock going down similar to the expected value of the call option. We can then find the payoff through the expression `payoff = max(Su-K, 0)` where `Cu` and `Cd` are the payoffs for up or down. Due to the *law of no arbitrage* we can discount this payoff by `e^rt` or `e^r` (as t = 1) to find the current Call price.
 
-Formula for initial Call price:
+Formula for initial Stock price:
 
 $$ S0 = \frac{q*Su + (1-q)*Sd}{1 + r} $$
 
